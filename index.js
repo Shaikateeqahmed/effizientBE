@@ -9,6 +9,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.get("/",(req,res)=>{
+    res.send("HOME PAGE")
+})
 app.use("/data",Data);
 
 app.listen(process.env.Port,async()=>{
